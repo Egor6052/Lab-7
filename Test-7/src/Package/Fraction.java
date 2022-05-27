@@ -22,7 +22,7 @@ public class Fraction {
     }
 
     public static double setA2(double a2) {
-       return Fraction.a2 = a2;
+        return Fraction.a2 = a2;
     }
 
     public static double setA3(double a3) {
@@ -68,11 +68,11 @@ public class Fraction {
     //-------------------------------------------
 
     public static double R() {
-        return Math.ceil((a1 / b1 + a2 / b2) * (a1 / b1 - a3 / b3));
+        return (a1 / b1 + a2 / b2) * (a1 / b1 - a3 / b3);
     }
 
     public static double R1() {
-        return Math.ceil(1 / (R()));
+        return 1 / (a1 / b1 + a2 / b2) * (a1 / b1 - a3 / b3);
     }
 
     @Override
@@ -80,7 +80,4 @@ public class Fraction {
         return "R = " + Correct.formatDouble(R()) + "\n" +
                 "1/R = " + Correct.formatDouble(R1()) + "\n\n\n";
     }
-
-
 }
-
